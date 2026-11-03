@@ -1,0 +1,18 @@
+{
+  "generator": "built-in image_gen",
+  "usage": "Editorial city imagery and labeled fallback covers; existing business photographs remain preferred.",
+  "images": [
+    {
+      "file": "images/city-guide.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: local lifestyle city guide website hero photograph, wide landscape 3:2. Scene: a quiet, beautifully designed contemporary cafe on a leafy Hangzhou neighborhood street in late afternoon, cream plaster facade, warm wood open windows, a small outdoor table, leafy trees framing the right, a bicycle, subtle everyday city life. Editorial travel photography, natural candid texture, warm sunlight and soft shadows, tasteful earthy palette, restrained film grain, sophisticated but approachable. No people recognizable in foreground, no signs with text, no typography, no logos, no watermark, no UI. Compose a detailed real-feeling photographic scene with some darker shadow near the lower left where a website may overlay text."
+    },
+    {
+      "file": "images/food-story.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: local lifestyle editorial food cover photograph, landscape 3:2. Close editorial photograph of a beautifully plated modern Chinese bistro meal, golden crisp dumplings, a ceramic bowl of noodles, a small seasonal green vegetable dish, chopsticks on a warm oak table, inviting subtle cafe background. Natural window light, authentic artisanal ceramic texture, slightly overhead 45 degree viewpoint, elegant uncontrived food magazine photography, warm amber and cream palette, real ingredients, gentle shadow, no excessive props. No text, no brand logos, no watermarks, no UI."
+    },
+    {
+      "file": "images/coffee-story.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: city guide cafe cover photograph, landscape 3:2. A ceramic latte with beautiful restrained latte art next to a flaky croissant and a tiny stem of green leaves on a travertine cafe counter, cozy modern warm wood cafe interior softly out of focus behind, morning side window light, analog editorial photography, crisp natural pastry texture, warm neutral palette with moss green accent, premium lifestyle photography. No text, no people, no logos, no watermark, no UI."
+    }
+  ]
+}

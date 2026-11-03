@@ -1,0 +1,17 @@
+<div class="app-shell">
+<a class="skip-link" href="#main">跳到主要内容</a>
+<header class="topbar">
+<a class="brand" href="/index.html" aria-label="探见首页"><span class="brand-mark"><i-icon name="compass"></i-icon></span><span>探见<small>CITY & INSPIRATION</small></span></a>
+<nav class="desktop-nav" aria-label="主导航"><a href="/index.html" :class="{active:active==='home'}">发现好店</a><a href="/notes.html" :class="{active:active==='notes'}">探店笔记</a><a href="/skills.html" :class="{active:active==='skills'}">AI 工作台<span class="nav-new">AI</span></a></nav>
+<div class="top-actions"><a class="merchant-link" href="/merchant.html"><i-icon name="store"></i-icon>商家中心</a><span class="top-divider"></span><a v-if="me" class="user-pill" href="/info.html"><img :src="image(me.icon,'/assets/avatar.svg')" alt="">{{me.nickName}}</a><a v-else class="btn small" href="/login.html">登录 / 注册</a></div>
+</header>
+<div v-if="workspace" class="workspace-nav"><div class="container"><a href="/info.html" :class="{active:page==='profile'}">个人中心</a><a href="/orders.html" :class="{active:page==='orders'}">优惠订单</a><a href="/reservations.html" :class="{active:page==='reservations'}">预约管理</a><a href="/skills.html" :class="{active:page==='skills'}">AI 创作</a><a href="/aiassistant.html" :class="{active:page==='chat'}">AI 客服</a><a href="/merchant.html" :class="{active:page==='merchant'}">商家管理</a></div></div>
+<main id="main" class="main-content" tabindex="-1">
+<div v-if="sessionLoading && requiresAuth" class="container"><state-box :loading="true"></state-box></div>
+<page-content v-else-if="canRender"></page-content>
+<div v-else class="container login-gate"><span class="eyebrow">YOUR CITY, YOUR LIFE</span><h1>登录，继续你的城市探索</h1><p>在这里查看优惠订单、管理预约，记录每一次值得分享的体验。</p><button class="btn" @click="login">登录 / 注册 <i-icon name="arrow"></i-icon></button><a class="text-link" href="/index.html">先逛逛好店</a></div>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><div><a class="footer-brand" href="/index.html">探见<span>让城市生活，多一点发现。</span></a><p>AI 智能经营中台 · 本地生活与内容创作</p></div><div><a href="/about.html">平台说明</a><a href="/merchant.html">商家服务</a><a href="/skills.html">AI 创作</a></div><small>© 2026 探见 · 探索身边的好生活</small></div></footer>
+<nav class="mobile-nav" aria-label="移动端主导航"><a href="/index.html" :class="{active:active==='home'}"><i-icon name="compass"></i-icon>发现</a><a href="/notes.html" :class="{active:active==='notes'}"><i-icon name="note"></i-icon>笔记</a><a href="/skills.html" :class="{active:active==='skills'}"><i-icon name="spark"></i-icon>AI 创作</a><a href="/info.html" :class="{active:active==='profile'}"><i-icon name="user"></i-icon>我的</a></nav>
+<transition name="toast"><div v-if="toast" class="toast-message" :class="toast.kind" role="status"><i-icon :name="toast.kind==='error'?'message':'check'"></i-icon>{{toast.message}}<button @click="toast=null" aria-label="关闭提示"><i-icon name="close"></i-icon></button></div></transition>
+</div>

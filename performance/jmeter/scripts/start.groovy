@@ -1,0 +1,6 @@
+vars.put('submit_started_ms', Long.toString(System.currentTimeMillis()))
+vars.put('order_id', '')
+vars.put('outcome', '')
+vars.put('business_ms', '')
+vars.put('poll_status', 'PENDING')
+vars.put('poll_count', '0')

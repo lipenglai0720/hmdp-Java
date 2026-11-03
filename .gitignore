@@ -1,0 +1,34 @@
+# IDE
+# Ignore IntelliJ IDEA project files
+/.idea/
+/AI-dianping-backend/.idea/
+
+# Build output
+# Ignore Maven build output directory
+/AI-dianping-backend/target/
+
+# NGINX runtime files
+# Ignore NGINX logs, temp files and the executable
+/AI-dianping-frontend/logs/
+/AI-dianping-frontend/temp/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Local load-test data, sessions and reports
+/performance/jmeter/.runtime/
+/performance/jmeter/results/
+/performance/jmeter/__pycache__/
+
+# Local credentials and machine-specific application settings
+.env
+.env.*
+!.env.example
+/AI-dianping-backend/src/main/resources/application.yml
+
+# Local backups, generated screenshots, logs and uploaded files
+/.codex-backups/
+/artifacts/
+/upload/
+*.log
