@@ -21,7 +21,7 @@ for(const file of fs.readdirSync(root).filter(x=>x.endsWith('.html'))){
   const source=fs.readFileSync(path.join(root,file),'utf8');
   assert(source.includes('/js/app.js?v=20261029'),`${file}: stale entry point`);entries++;
 }
-for(const file of fs.readdirSync(path.join(root,'js')).filter(x=>x.endsWith('.js')&&!['vue.js','axios.min.js','element.js','ui.js','common.js','footer.js','ai-assistant.js'].includes(x)))
+for(const file of fs.readdirSync(path.join(root,'js')).filter(x=>x.endsWith('.js')&&x!=='vue.js'))
   new vm.Script(fs.readFileSync(path.join(root,'js',file),'utf8'),{filename:file});
 assert.equal(messages.length,0,messages.join('\n'));
 console.log(JSON.stringify({entries,views,templateCompilation:'passed',localLinks:'passed',javascriptSyntax:'passed'}));

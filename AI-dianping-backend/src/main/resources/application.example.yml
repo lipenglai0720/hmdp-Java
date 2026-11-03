@@ -52,4 +52,4 @@ langchain4j:
 # 图片上传本地存储路径
 hm:
   upload:
-    path: D:/hmdp-Java/upload/
+    path: ${HM_UPLOAD_PATH:./upload/}

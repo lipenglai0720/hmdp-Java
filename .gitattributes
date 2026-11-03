@@ -1,0 +1,9 @@
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Keep third-party frontend libraries out of the repository language breakdown.
+AI-dianping-frontend/html/hmdp/js/vue.js linguist-vendored
+AI-dianping-frontend/docs/** linguist-vendored
+performance/jmeter/*.jmx linguist-generated
+db.sql linguist-generated

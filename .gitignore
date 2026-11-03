@@ -31,4 +31,12 @@ Thumbs.db
 /.codex-backups/
 /artifacts/
 /upload/
+/AI-dianping-backend/upload/
 *.log
+.vscode/
+.agents/
+.codex/
+*.pem
+*.key
+__pycache__/
+*.pyc
